@@ -3,7 +3,7 @@
 
 #Thanks to http://knowles.co.za/generating-south-african-id-numbers/ initially created a java version
 
-SA.ID.number.parse <- function(x) {
+SA.ID.number.parse <- function(ID_number) {
   #need to use lubridate
   library(lubridate)
   dob.string <- as.character(x)
