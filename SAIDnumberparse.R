@@ -3,10 +3,10 @@
 
 #Thanks to http://knowles.co.za/generating-south-african-id-numbers/ initially created a java version
 
-SA.ID.number.parse <- function(x) {
+SA.ID.number.parse <- function(ID_number) {
   #need to use lubridate
   library(lubridate)
-  dob.string <- as.character(x)
+  dob.string <- as.character(ID_number)
   dob.year <- substring(dob.string, 1, 2)
   dob.year.full <- ifelse(as.numeric(dob.year<20), paste(20, dob.year), paste(19, dob.year, sep = ""))
   dob.month <- substring(dob.string, 3, 4)
