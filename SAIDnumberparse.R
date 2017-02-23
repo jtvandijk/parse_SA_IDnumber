@@ -16,7 +16,7 @@ SA.ID.number.parse <- function(x) {
   female <- ifelse(as.numeric(gender) < 5, TRUE, FALSE)
   dob.date <- ymd(paste(dob.year.full, dob.month, dob.day, sep = "-"))
   sa.citizen <- ifelse(substring(dob.string, 11, 11) == 0, TRUE, FALSE)
-  return(c(dob.year, dob.month, dob.day, dob.year.full, dob.date, male, female, sa.citizen))
+  #return(c(dob.year, dob.month, dob.day, dob.year.full, dob.date, male, female, sa.citizen))
+  id_info <- cbind(ID_number, dob.year, dob.month, dob.day, dob.year.full, dob.date, male, female, sa.citizen)
+  return(id_info)
 }
-  
-
